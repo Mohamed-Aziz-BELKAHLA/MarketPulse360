@@ -1,0 +1,827 @@
+[0m00:09:29.343933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021847D3CE30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002184A449730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021849B7A540>]}
+
+
+============================== 00:09:29.345940 | eafa089e-b5de-4557-b8b0-1754547621d2 ==============================
+[0m00:09:29.345940 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m00:09:29.345940 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\PC\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m00:09:29.360827 [info ] [MainThread]: dbt version: 1.12.0-b1
+[0m00:09:29.361842 [info ] [MainThread]: python version: 3.12.4
+[0m00:09:29.361842 [info ] [MainThread]: python path: C:\Users\PC\MarketPulse360\venv\Scripts\python.exe
+[0m00:09:29.362535 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m00:09:29.400790 [info ] [MainThread]: Using profiles dir at C:\Users\PC\.dbt
+[0m00:09:29.400790 [info ] [MainThread]: Using profiles.yml file at C:\Users\PC\.dbt\profiles.yml
+[0m00:09:29.400790 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\PC\MarketPulse360\dbt_project\dbt_project.yml
+[0m00:09:29.400790 [info ] [MainThread]: adapter type: postgres
+[0m00:09:29.400790 [info ] [MainThread]: adapter version: 1.10.0
+[0m00:09:29.400790 [info ] [MainThread]: Configuration:
+[0m00:09:29.406799 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:09:29.406799 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m00:09:29.406799 [info ] [MainThread]: Required dependencies:
+[0m00:09:29.406799 [debug] [MainThread]: Executing "git --help"
+[0m00:09:29.439380 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:09:29.439380 [debug] [MainThread]: STDERR: "b''"
+[0m00:09:29.440917 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:09:29.440917 [info ] [MainThread]: Connection:
+[0m00:09:29.441931 [info ] [MainThread]:   host: localhost
+[0m00:09:29.441931 [info ] [MainThread]:   port: 5432
+[0m00:09:29.441931 [info ] [MainThread]:   user: postgres
+[0m00:09:29.442931 [info ] [MainThread]:   database: marketpulse360
+[0m00:09:29.443355 [info ] [MainThread]:   schema: analytics
+[0m00:09:29.443355 [info ] [MainThread]:   connect_timeout: 10
+[0m00:09:29.443355 [info ] [MainThread]:   role: None
+[0m00:09:29.443355 [info ] [MainThread]:   search_path: None
+[0m00:09:29.444576 [info ] [MainThread]:   keepalives_idle: 0
+[0m00:09:29.444576 [info ] [MainThread]:   sslmode: None
+[0m00:09:29.444576 [info ] [MainThread]:   sslcert: None
+[0m00:09:29.445461 [info ] [MainThread]:   sslkey: None
+[0m00:09:29.445461 [info ] [MainThread]:   sslrootcert: None
+[0m00:09:29.446409 [info ] [MainThread]:   application_name: dbt
+[0m00:09:29.446720 [info ] [MainThread]:   retries: 1
+[0m00:09:29.447110 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m00:09:29.709389 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m00:09:33.211171 [debug] [MainThread]: Using postgres connection "debug"
+[0m00:09:33.211171 [debug] [MainThread]: On debug: select 1 as id
+[0m00:09:33.211171 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:09:33.344774 [debug] [MainThread]: SQL status: SELECT 1 in 0.132 seconds
+[0m00:09:33.345775 [debug] [MainThread]: On debug: Close
+[0m00:09:33.345775 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m00:09:33.346759 [info ] [MainThread]: [31m1 check failed:[0m
+[0m00:09:33.347154 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\PC\MarketPulse360\dbt_project\dbt_project.yml> not found
+
+[0m00:09:33.347472 [debug] [MainThread]: Command `dbt debug` failed at 00:09:33.347472 after 4.16 seconds
+[0m00:09:33.347472 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:09:33.348515 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002184AA63EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002184BFD6E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002184A948800>]}
+[0m00:09:33.348515 [debug] [MainThread]: Flushing usage events
+[0m00:09:33.969919 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:10:58.719108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BFDFA9370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BFE257BC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BFB4A9430>]}
+
+
+============================== 00:10:58.723540 | 445ddd14-6a13-4976-b637-ec03c3554f75 ==============================
+[0m00:10:58.723540 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m00:10:58.724957 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\PC\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\PC\\MarketPulse360\\dbt_project\\logs'}
+[0m00:10:58.739065 [info ] [MainThread]: dbt version: 1.12.0-b1
+[0m00:10:58.740105 [info ] [MainThread]: python version: 3.12.4
+[0m00:10:58.740105 [info ] [MainThread]: python path: C:\Users\PC\MarketPulse360\venv\Scripts\python.exe
+[0m00:10:58.741282 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m00:10:58.782741 [info ] [MainThread]: Using profiles dir at C:\Users\PC\.dbt
+[0m00:10:58.782741 [info ] [MainThread]: Using profiles.yml file at C:\Users\PC\.dbt\profiles.yml
+[0m00:10:58.783740 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\PC\MarketPulse360\dbt_project\dbt_project.yml
+[0m00:10:58.784610 [info ] [MainThread]: adapter type: postgres
+[0m00:10:58.784610 [info ] [MainThread]: adapter version: 1.10.0
+[0m00:10:58.868644 [info ] [MainThread]: Configuration:
+[0m00:10:58.868644 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:10:58.870258 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:10:58.870258 [info ] [MainThread]: Required dependencies:
+[0m00:10:58.871287 [debug] [MainThread]: Executing "git --help"
+[0m00:10:58.899426 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:10:58.899426 [debug] [MainThread]: STDERR: "b''"
+[0m00:10:58.900427 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:10:58.900941 [info ] [MainThread]: Connection:
+[0m00:10:58.901295 [info ] [MainThread]:   host: localhost
+[0m00:10:58.901295 [info ] [MainThread]:   port: 5432
+[0m00:10:58.901295 [info ] [MainThread]:   user: postgres
+[0m00:10:58.902412 [info ] [MainThread]:   database: marketpulse360
+[0m00:10:58.902412 [info ] [MainThread]:   schema: analytics
+[0m00:10:58.902412 [info ] [MainThread]:   connect_timeout: 10
+[0m00:10:58.903414 [info ] [MainThread]:   role: None
+[0m00:10:58.903414 [info ] [MainThread]:   search_path: None
+[0m00:10:58.903414 [info ] [MainThread]:   keepalives_idle: 0
+[0m00:10:58.903414 [info ] [MainThread]:   sslmode: None
+[0m00:10:58.904414 [info ] [MainThread]:   sslcert: None
+[0m00:10:58.904414 [info ] [MainThread]:   sslkey: None
+[0m00:10:58.904414 [info ] [MainThread]:   sslrootcert: None
+[0m00:10:58.904414 [info ] [MainThread]:   application_name: dbt
+[0m00:10:58.904414 [info ] [MainThread]:   retries: 1
+[0m00:10:58.904414 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m00:10:59.027848 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m00:10:59.060077 [debug] [MainThread]: Using postgres connection "debug"
+[0m00:10:59.060077 [debug] [MainThread]: On debug: select 1 as id
+[0m00:10:59.060077 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:10:59.092660 [debug] [MainThread]: SQL status: SELECT 1 in 0.032 seconds
+[0m00:10:59.092660 [debug] [MainThread]: On debug: Close
+[0m00:10:59.094493 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m00:10:59.094493 [info ] [MainThread]: [32mAll checks passed![0m
+[0m00:10:59.095509 [debug] [MainThread]: Command `dbt debug` succeeded at 00:10:59.095509 after 0.66 seconds
+[0m00:10:59.095509 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:10:59.095509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023B8000D100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BFDD214C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BFDD233B0>]}
+[0m00:10:59.096512 [debug] [MainThread]: Flushing usage events
+[0m00:10:59.725588 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:17:08.547892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A69BFE00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A7171580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A71714C0>]}
+
+
+============================== 00:17:08.547892 | bcfd69a5-cb6f-4e6a-9f45-cec9c436a717 ==============================
+[0m00:17:08.547892 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m00:17:08.551813 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\PC\\.dbt', 'invocation_command': 'dbt run', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\PC\\MarketPulse360\\dbt_project\\logs'}
+[0m00:17:08.737752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bcfd69a5-cb6f-4e6a-9f45-cec9c436a717', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A64EF320>]}
+[0m00:17:08.787766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bcfd69a5-cb6f-4e6a-9f45-cec9c436a717', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A8A89640>]}
+[0m00:17:08.787766 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m00:17:08.988890 [debug] [MainThread]: checksum: 25767e2a6c738993e5256d5ad4bb98acc1955672a8aaab0624d7df3326031209, vars: {}, profile: dbt_project, target: dev, version: 1.12.0b1
+[0m00:17:08.988890 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m00:17:08.989963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'bcfd69a5-cb6f-4e6a-9f45-cec9c436a717', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A8BAC230>]}
+[0m00:17:11.537785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bcfd69a5-cb6f-4e6a-9f45-cec9c436a717', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A895B3B0>]}
+[0m00:17:11.595376 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\PC\MarketPulse360\dbt_project\target\manifest.json
+[0m00:17:11.628027 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\PC\MarketPulse360\dbt_project\target\semantic_manifest.json
+[0m00:17:11.637783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bcfd69a5-cb6f-4e6a-9f45-cec9c436a717', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A91E83E0>]}
+[0m00:17:11.637783 [info ] [MainThread]: Found 5 models, 8 sources, 475 macros
+[0m00:17:11.637783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bcfd69a5-cb6f-4e6a-9f45-cec9c436a717', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A8E6FB30>]}
+[0m00:17:11.637783 [info ] [MainThread]: 
+[0m00:17:11.637783 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m00:17:11.637783 [info ] [MainThread]: 
+[0m00:17:11.637783 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m00:17:11.644120 [debug] [ThreadPool]: Acquiring new postgres connection 'list_marketpulse360'
+[0m00:17:11.680805 [debug] [ThreadPool]: Using postgres connection "list_marketpulse360"
+[0m00:17:11.680805 [debug] [ThreadPool]: On list_marketpulse360: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_marketpulse360"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m00:17:11.683791 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:17:11.828421 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.144 seconds
+[0m00:17:11.828778 [debug] [ThreadPool]: On list_marketpulse360: Close
+[0m00:17:11.828778 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_marketpulse360, now create_marketpulse360_analytics)
+[0m00:17:11.830433 [debug] [ThreadPool]: Creating schema "database: "marketpulse360"
+schema: "analytics"
+"
+[0m00:17:11.833899 [debug] [ThreadPool]: Using postgres connection "create_marketpulse360_analytics"
+[0m00:17:11.833899 [debug] [ThreadPool]: On create_marketpulse360_analytics: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_marketpulse360_analytics"} */
+create schema if not exists "analytics"
+[0m00:17:11.833899 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:17:11.959092 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.131 seconds
+[0m00:17:11.959092 [debug] [ThreadPool]: On create_marketpulse360_analytics: COMMIT
+[0m00:17:11.959092 [debug] [ThreadPool]: Using postgres connection "create_marketpulse360_analytics"
+[0m00:17:11.959092 [debug] [ThreadPool]: On create_marketpulse360_analytics: COMMIT
+[0m00:17:11.967608 [debug] [ThreadPool]: SQL status: COMMIT in 0.001 seconds
+[0m00:17:11.967608 [debug] [ThreadPool]: On create_marketpulse360_analytics: Close
+[0m00:17:11.967608 [debug] [ThreadPool]: Acquiring new postgres connection 'list_marketpulse360_analytics'
+[0m00:17:11.967608 [debug] [ThreadPool]: Using postgres connection "list_marketpulse360_analytics"
+[0m00:17:11.967608 [debug] [ThreadPool]: On list_marketpulse360_analytics: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_marketpulse360_analytics"} */
+select
+      'marketpulse360' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'marketpulse360' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'marketpulse360' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m00:17:11.967608 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:17:12.002800 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.029 seconds
+[0m00:17:12.002800 [debug] [ThreadPool]: On list_marketpulse360_analytics: ROLLBACK
+[0m00:17:12.002800 [debug] [ThreadPool]: On list_marketpulse360_analytics: Close
+[0m00:17:12.007087 [debug] [MainThread]: Using postgres connection "master"
+[0m00:17:12.007647 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m00:17:12.007647 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:17:12.037735 [debug] [MainThread]: SQL status: SELECT 0 in 0.030 seconds
+[0m00:17:12.037735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bcfd69a5-cb6f-4e6a-9f45-cec9c436a717', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A91EA000>]}
+[0m00:17:12.038963 [debug] [MainThread]: On master: ROLLBACK
+[0m00:17:12.038963 [debug] [MainThread]: On master: COMMIT
+[0m00:17:12.038963 [debug] [MainThread]: Using postgres connection "master"
+[0m00:17:12.038963 [debug] [MainThread]: On master: COMMIT
+[0m00:17:12.038963 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m00:17:12.038963 [debug] [MainThread]: On master: Close
+[0m00:17:12.043047 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_customers
+[0m00:17:12.043047 [debug] [Thread-2 (]: Began running node model.dbt_project.stg_order_items
+[0m00:17:12.043047 [debug] [Thread-3 (]: Began running node model.dbt_project.stg_orders
+[0m00:17:12.043047 [info ] [Thread-1 (]: 1 of 5 START sql view model analytics.stg_customers ............................ [RUN]
+[0m00:17:12.043047 [info ] [Thread-2 (]: 2 of 5 START sql view model analytics.stg_order_items .......................... [RUN]
+[0m00:17:12.043047 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.dbt_project.stg_customers'
+[0m00:17:12.043047 [info ] [Thread-3 (]: 3 of 5 START sql view model analytics.stg_orders ............................... [RUN]
+[0m00:17:12.047532 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.dbt_project.stg_order_items'
+[0m00:17:12.047532 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_customers
+[0m00:17:12.047532 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.dbt_project.stg_orders'
+[0m00:17:12.047532 [debug] [Thread-2 (]: Began compiling node model.dbt_project.stg_order_items
+[0m00:17:12.052774 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_customers"
+[0m00:17:12.052774 [debug] [Thread-3 (]: Began compiling node model.dbt_project.stg_orders
+[0m00:17:12.056832 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_project.stg_order_items"
+[0m00:17:12.059071 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_project.stg_orders"
+[0m00:17:12.060771 [debug] [Thread-2 (]: Began executing node model.dbt_project.stg_order_items
+[0m00:17:12.066786 [debug] [Thread-3 (]: Began executing node model.dbt_project.stg_orders
+[0m00:17:12.092776 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_project.stg_order_items"
+[0m00:17:12.092776 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_project.stg_orders"
+[0m00:17:12.092776 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_customers
+[0m00:17:12.097633 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_customers"
+[0m00:17:12.097633 [debug] [Thread-2 (]: Using postgres connection "model.dbt_project.stg_order_items"
+[0m00:17:12.097633 [debug] [Thread-2 (]: On model.dbt_project.stg_order_items: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_items"} */
+
+  create view "marketpulse360"."analytics"."stg_order_items__dbt_tmp"
+    
+    
+  as (
+    WITH source AS (
+    SELECT * FROM "marketpulse360"."public"."raw_order_items"
+)
+SELECT
+    order_id,
+    product_id,
+    seller_id,
+    price,
+    freight_value,
+    price + freight_value AS total_item_value
+FROM source
+  );
+[0m00:17:12.097633 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m00:17:12.097633 [debug] [Thread-3 (]: Using postgres connection "model.dbt_project.stg_orders"
+[0m00:17:12.097633 [debug] [Thread-3 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+
+  create view "marketpulse360"."analytics"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    WITH source AS (
+    SELECT * FROM "marketpulse360"."public"."raw_orders"
+),
+cleaned AS (
+    SELECT
+        order_id,
+        customer_id,
+        order_status,
+        order_purchase_timestamp::date  AS order_date,
+        order_delivered_customer_date::date AS delivered_date,
+        EXTRACT(YEAR  FROM order_purchase_timestamp) AS year,
+        EXTRACT(MONTH FROM order_purchase_timestamp) AS month
+    FROM source
+    WHERE order_status = 'delivered'
+      AND order_purchase_timestamp IS NOT NULL
+)
+SELECT * FROM cleaned
+  );
+[0m00:17:12.102485 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m00:17:12.102485 [debug] [Thread-1 (]: Using postgres connection "model.dbt_project.stg_customers"
+[0m00:17:12.102485 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_customers"} */
+
+  create view "marketpulse360"."analytics"."stg_customers__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    customer_id,
+    customer_unique_id,
+    customer_city,
+    customer_state
+FROM "marketpulse360"."public"."raw_customers"
+  );
+[0m00:17:12.102485 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:17:12.134952 [debug] [Thread-3 (]: Postgres adapter: Postgres error: ERREUR:  la fonction pg_catalog.extract(unknown, text) n'existe pas
+LINE 17:         EXTRACT(YEAR  FROM order_purchase_timestamp) AS year...
+                 ^
+HINT:  Aucune fonction ne correspond au nom donné et aux types d'arguments.
+Vous devez ajouter des conversions explicites de type.
+
+[0m00:17:12.136003 [debug] [Thread-3 (]: On model.dbt_project.stg_orders: ROLLBACK
+[0m00:17:12.136546 [debug] [Thread-3 (]: On model.dbt_project.stg_orders: Close
+[0m00:17:12.154434 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.051 seconds
+[0m00:17:12.154434 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.054 seconds
+[0m00:17:12.160692 [debug] [Thread-1 (]: Using postgres connection "model.dbt_project.stg_customers"
+[0m00:17:12.163671 [debug] [Thread-2 (]: Using postgres connection "model.dbt_project.stg_order_items"
+[0m00:17:12.163671 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_customers"} */
+alter table "marketpulse360"."analytics"."stg_customers__dbt_tmp" rename to "stg_customers"
+[0m00:17:12.163671 [debug] [Thread-2 (]: On model.dbt_project.stg_order_items: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_items"} */
+alter table "marketpulse360"."analytics"."stg_order_items__dbt_tmp" rename to "stg_order_items"
+[0m00:17:12.163671 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m00:17:12.163671 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m00:17:12.176946 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: COMMIT
+[0m00:17:12.178221 [debug] [Thread-2 (]: On model.dbt_project.stg_order_items: COMMIT
+[0m00:17:12.178221 [debug] [Thread-1 (]: Using postgres connection "model.dbt_project.stg_customers"
+[0m00:17:12.180319 [debug] [Thread-2 (]: Using postgres connection "model.dbt_project.stg_order_items"
+[0m00:17:12.180683 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: COMMIT
+[0m00:17:12.180683 [debug] [Thread-2 (]: On model.dbt_project.stg_order_items: COMMIT
+[0m00:17:12.180683 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m00:17:12.186957 [debug] [Thread-2 (]: SQL status: COMMIT in 0.006 seconds
+[0m00:17:12.186957 [debug] [Thread-1 (]: Applying DROP to: "marketpulse360"."analytics"."stg_customers__dbt_backup"
+[0m00:17:12.190269 [debug] [Thread-2 (]: Applying DROP to: "marketpulse360"."analytics"."stg_order_items__dbt_backup"
+[0m00:17:12.193597 [debug] [Thread-1 (]: Using postgres connection "model.dbt_project.stg_customers"
+[0m00:17:12.193597 [debug] [Thread-2 (]: Using postgres connection "model.dbt_project.stg_order_items"
+[0m00:17:12.193597 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_customers"} */
+drop view if exists "marketpulse360"."analytics"."stg_customers__dbt_backup" cascade
+[0m00:17:12.193597 [debug] [Thread-2 (]: On model.dbt_project.stg_order_items: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_items"} */
+drop view if exists "marketpulse360"."analytics"."stg_order_items__dbt_backup" cascade
+[0m00:17:12.196912 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m00:17:12.196912 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m00:17:12.198204 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: Close
+[0m00:17:12.198204 [debug] [Thread-2 (]: On model.dbt_project.stg_order_items: Close
+[0m00:17:12.200268 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bcfd69a5-cb6f-4e6a-9f45-cec9c436a717', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A432D610>]}
+[0m00:17:12.200268 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bcfd69a5-cb6f-4e6a-9f45-cec9c436a717', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A9621D00>]}
+[0m00:17:12.200268 [info ] [Thread-1 (]: 1 of 5 OK created sql view model analytics.stg_customers ....................... [[32mCREATE VIEW[0m in 0.16s]
+[0m00:17:12.203960 [info ] [Thread-2 (]: 2 of 5 OK created sql view model analytics.stg_order_items ..................... [[32mCREATE VIEW[0m in 0.15s]
+[0m00:17:12.203960 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_customers
+[0m00:17:12.203960 [debug] [Thread-2 (]: Finished running node model.dbt_project.stg_order_items
+[0m00:17:12.237687 [debug] [Thread-3 (]: Database Error in model stg_orders (models\staging\stg_orders.sql)
+  ERREUR:  la fonction pg_catalog.extract(unknown, text) n'existe pas
+  LINE 17:         EXTRACT(YEAR  FROM order_purchase_timestamp) AS year...
+                   ^
+  HINT:  Aucune fonction ne correspond au nom donné et aux types d'arguments.
+  Vous devez ajouter des conversions explicites de type.
+  compiled code at target\run\dbt_project\models\staging\stg_orders.sql
+[0m00:17:12.237687 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bcfd69a5-cb6f-4e6a-9f45-cec9c436a717', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A86665D0>]}
+[0m00:17:12.240345 [error] [Thread-3 (]: 3 of 5 ERROR creating sql view model analytics.stg_orders ...................... [[31mERROR[0m in 0.19s]
+[0m00:17:12.240345 [debug] [Thread-3 (]: Finished running node model.dbt_project.stg_orders
+[0m00:17:12.240345 [debug] [Thread-7 (]: Marking all children of 'model.dbt_project.stg_orders' to be skipped because of status 'error'.  Reason: Database Error in model stg_orders (models\staging\stg_orders.sql)
+  ERREUR:  la fonction pg_catalog.extract(unknown, text) n'existe pas
+  LINE 17:         EXTRACT(YEAR  FROM order_purchase_timestamp) AS year...
+                   ^
+  HINT:  Aucune fonction ne correspond au nom donné et aux types d'arguments.
+  Vous devez ajouter des conversions explicites de type.
+  compiled code at target\run\dbt_project\models\staging\stg_orders.sql.
+[0m00:17:12.240345 [debug] [Thread-4 (]: Began running node model.dbt_project.mart_revenue
+[0m00:17:12.240345 [info ] [Thread-4 (]: 4 of 5 SKIP relation analytics.mart_revenue .................................... [[33mSKIP[0m]
+[0m00:17:12.240345 [debug] [Thread-4 (]: Finished running node model.dbt_project.mart_revenue
+[0m00:17:12.243605 [debug] [Thread-2 (]: Began running node model.dbt_project.mart_customer_value
+[0m00:17:12.243605 [info ] [Thread-2 (]: 5 of 5 SKIP relation analytics.mart_customer_value ............................. [[33mSKIP[0m]
+[0m00:17:12.243605 [debug] [Thread-2 (]: Finished running node model.dbt_project.mart_customer_value
+[0m00:17:12.243605 [debug] [MainThread]: On master: COMMIT
+[0m00:17:12.243605 [debug] [MainThread]: Using postgres connection "master"
+[0m00:17:12.243605 [debug] [MainThread]: On master: COMMIT
+[0m00:17:12.243605 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:17:12.274373 [debug] [MainThread]: SQL status: COMMIT in 0.028 seconds
+[0m00:17:12.274373 [debug] [MainThread]: On master: Close
+[0m00:17:12.274373 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:17:12.274373 [debug] [MainThread]: Connection 'create_marketpulse360_analytics' was properly closed.
+[0m00:17:12.274373 [debug] [MainThread]: Connection 'list_marketpulse360_analytics' was properly closed.
+[0m00:17:12.274373 [debug] [MainThread]: Connection 'model.dbt_project.stg_customers' was properly closed.
+[0m00:17:12.274373 [debug] [MainThread]: Connection 'model.dbt_project.stg_order_items' was properly closed.
+[0m00:17:12.274373 [debug] [MainThread]: Connection 'model.dbt_project.stg_orders' was properly closed.
+[0m00:17:12.274373 [info ] [MainThread]: 
+[0m00:17:12.274373 [info ] [MainThread]: Finished running 2 table models, 3 view models in 0 hours 0 minutes and 0.64 seconds (0.64s).
+[0m00:17:12.277936 [debug] [MainThread]: Command end result
+[0m00:17:12.293943 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\PC\MarketPulse360\dbt_project\target\manifest.json
+[0m00:17:12.298658 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\PC\MarketPulse360\dbt_project\target\semantic_manifest.json
+[0m00:17:12.303657 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\PC\MarketPulse360\dbt_project\target\run_results.json
+[0m00:17:12.304656 [info ] [MainThread]: 
+[0m00:17:12.304656 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m00:17:12.304656 [info ] [MainThread]: 
+[0m00:17:12.304656 [error] [MainThread]: [[31mERROR[0m]: in model stg_orders (models\staging\stg_orders.sql)
+[0m00:17:12.304656 [error] [MainThread]:   Database Error in model stg_orders (models\staging\stg_orders.sql)
+  ERREUR:  la fonction pg_catalog.extract(unknown, text) n'existe pas
+  LINE 17:         EXTRACT(YEAR  FROM order_purchase_timestamp) AS year...
+                   ^
+  HINT:  Aucune fonction ne correspond au nom donné et aux types d'arguments.
+  Vous devez ajouter des conversions explicites de type.
+  compiled code at target\run\dbt_project\models\staging\stg_orders.sql
+[0m00:17:12.304656 [info ] [MainThread]: 
+[0m00:17:12.304656 [info ] [MainThread]:   compiled code at target\compiled\dbt_project\models\staging\stg_orders.sql
+[0m00:17:12.307905 [info ] [MainThread]: 
+[0m00:17:12.307905 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=2 NO-OP=0 TOTAL=5
+[0m00:17:12.307905 [debug] [MainThread]: Command `dbt run` failed at 00:17:12.307905 after 4.01 seconds
+[0m00:17:12.307905 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A6E89FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A8B34170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A8AB9B80>]}
+[0m00:17:12.307905 [debug] [MainThread]: Flushing usage events
+[0m00:17:12.888047 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:18:24.757156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F7996E1B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F775B51F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F7A11CD10>]}
+
+
+============================== 00:18:24.760965 | df30f088-2150-4466-bb9b-7f4768bd495a ==============================
+[0m00:18:24.760965 [info ] [MainThread]: Running with dbt=1.12.0-b1
+[0m00:18:24.760965 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\PC\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\PC\\MarketPulse360\\dbt_project\\logs'}
+[0m00:18:24.908874 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'df30f088-2150-4466-bb9b-7f4768bd495a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F7BF00DD0>]}
+[0m00:18:24.962193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'df30f088-2150-4466-bb9b-7f4768bd495a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F79DF4560>]}
+[0m00:18:24.962193 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m00:18:25.100834 [debug] [MainThread]: checksum: 25767e2a6c738993e5256d5ad4bb98acc1955672a8aaab0624d7df3326031209, vars: {}, profile: dbt_project, target: dev, version: 1.12.0b1
+[0m00:18:25.201082 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m00:18:25.201082 [debug] [MainThread]: Partial parsing: updated file: dbt_project://models\staging\stg_orders.sql
+[0m00:18:25.414547 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'df30f088-2150-4466-bb9b-7f4768bd495a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F7C55ECF0>]}
+[0m00:18:25.472379 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\PC\MarketPulse360\dbt_project\target\manifest.json
+[0m00:18:25.472379 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\PC\MarketPulse360\dbt_project\target\semantic_manifest.json
+[0m00:18:25.478458 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'df30f088-2150-4466-bb9b-7f4768bd495a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F7C539610>]}
+[0m00:18:25.478458 [info ] [MainThread]: Found 5 models, 8 sources, 475 macros
+[0m00:18:25.487208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df30f088-2150-4466-bb9b-7f4768bd495a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F7C4FF0B0>]}
+[0m00:18:25.487208 [info ] [MainThread]: 
+[0m00:18:25.487208 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m00:18:25.487208 [info ] [MainThread]: 
+[0m00:18:25.487208 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m00:18:25.487208 [debug] [ThreadPool]: Acquiring new postgres connection 'list_marketpulse360'
+[0m00:18:25.575520 [debug] [ThreadPool]: Using postgres connection "list_marketpulse360"
+[0m00:18:25.575520 [debug] [ThreadPool]: On list_marketpulse360: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_marketpulse360"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m00:18:25.576627 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:18:25.610281 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.034 seconds
+[0m00:18:25.612128 [debug] [ThreadPool]: On list_marketpulse360: Close
+[0m00:18:25.612493 [debug] [ThreadPool]: Acquiring new postgres connection 'list_marketpulse360_analytics'
+[0m00:18:25.617450 [debug] [ThreadPool]: Using postgres connection "list_marketpulse360_analytics"
+[0m00:18:25.617974 [debug] [ThreadPool]: On list_marketpulse360_analytics: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_marketpulse360_analytics"} */
+select
+      'marketpulse360' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'marketpulse360' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'marketpulse360' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m00:18:25.617974 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:18:25.653209 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.035 seconds
+[0m00:18:25.654002 [debug] [ThreadPool]: On list_marketpulse360_analytics: ROLLBACK
+[0m00:18:25.654910 [debug] [ThreadPool]: On list_marketpulse360_analytics: Close
+[0m00:18:25.658760 [debug] [MainThread]: Using postgres connection "master"
+[0m00:18:25.659107 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m00:18:25.659107 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:18:25.707939 [debug] [MainThread]: SQL status: SELECT 2 in 0.049 seconds
+[0m00:18:25.709159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df30f088-2150-4466-bb9b-7f4768bd495a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F7C79DC10>]}
+[0m00:18:25.709159 [debug] [MainThread]: On master: ROLLBACK
+[0m00:18:25.709159 [debug] [MainThread]: On master: COMMIT
+[0m00:18:25.709159 [debug] [MainThread]: Using postgres connection "master"
+[0m00:18:25.709159 [debug] [MainThread]: On master: COMMIT
+[0m00:18:25.712273 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m00:18:25.712716 [debug] [MainThread]: On master: Close
+[0m00:18:25.717349 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_customers
+[0m00:18:25.717349 [debug] [Thread-2 (]: Began running node model.dbt_project.stg_order_items
+[0m00:18:25.718810 [debug] [Thread-3 (]: Began running node model.dbt_project.stg_orders
+[0m00:18:25.718810 [info ] [Thread-1 (]: 1 of 5 START sql view model analytics.stg_customers ............................ [RUN]
+[0m00:18:25.720232 [info ] [Thread-2 (]: 2 of 5 START sql view model analytics.stg_order_items .......................... [RUN]
+[0m00:18:25.720232 [info ] [Thread-3 (]: 3 of 5 START sql view model analytics.stg_orders ............................... [RUN]
+[0m00:18:25.722121 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.dbt_project.stg_customers'
+[0m00:18:25.722121 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.dbt_project.stg_order_items'
+[0m00:18:25.722121 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.dbt_project.stg_orders'
+[0m00:18:25.722121 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_customers
+[0m00:18:25.722121 [debug] [Thread-2 (]: Began compiling node model.dbt_project.stg_order_items
+[0m00:18:25.722121 [debug] [Thread-3 (]: Began compiling node model.dbt_project.stg_orders
+[0m00:18:25.730261 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_customers"
+[0m00:18:25.732179 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_project.stg_order_items"
+[0m00:18:25.733647 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_project.stg_orders"
+[0m00:18:25.735398 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_customers
+[0m00:18:25.749220 [debug] [Thread-3 (]: Began executing node model.dbt_project.stg_orders
+[0m00:18:25.749645 [debug] [Thread-2 (]: Began executing node model.dbt_project.stg_order_items
+[0m00:18:25.765501 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_customers"
+[0m00:18:25.768045 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_project.stg_orders"
+[0m00:18:25.770372 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_project.stg_order_items"
+[0m00:18:25.771029 [debug] [Thread-1 (]: Using postgres connection "model.dbt_project.stg_customers"
+[0m00:18:25.771029 [debug] [Thread-3 (]: Using postgres connection "model.dbt_project.stg_orders"
+[0m00:18:25.772079 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_customers"} */
+
+  create view "marketpulse360"."analytics"."stg_customers__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    customer_id,
+    customer_unique_id,
+    customer_city,
+    customer_state
+FROM "marketpulse360"."public"."raw_customers"
+  );
+[0m00:18:25.772398 [debug] [Thread-2 (]: Using postgres connection "model.dbt_project.stg_order_items"
+[0m00:18:25.772398 [debug] [Thread-3 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+
+  create view "marketpulse360"."analytics"."stg_orders__dbt_tmp"
+    
+    
+  as (
+    WITH source AS (
+    SELECT * FROM "marketpulse360"."public"."raw_orders"
+),
+cleaned AS (
+    SELECT
+        order_id,
+        customer_id,
+        order_status,
+        order_purchase_timestamp::timestamp::date       AS order_date,
+        order_delivered_customer_date::timestamp::date  AS delivered_date,
+        EXTRACT(YEAR  FROM order_purchase_timestamp::timestamp)::int AS year,
+        EXTRACT(MONTH FROM order_purchase_timestamp::timestamp)::int AS month
+    FROM source
+    WHERE order_status = 'delivered'
+      AND order_purchase_timestamp IS NOT NULL
+)
+SELECT * FROM cleaned
+  );
+[0m00:18:25.772398 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:18:25.773515 [debug] [Thread-2 (]: On model.dbt_project.stg_order_items: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_items"} */
+
+  create view "marketpulse360"."analytics"."stg_order_items__dbt_tmp"
+    
+    
+  as (
+    WITH source AS (
+    SELECT * FROM "marketpulse360"."public"."raw_order_items"
+)
+SELECT
+    order_id,
+    product_id,
+    seller_id,
+    price,
+    freight_value,
+    price + freight_value AS total_item_value
+FROM source
+  );
+[0m00:18:25.773515 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m00:18:25.774136 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m00:18:25.807491 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.037 seconds
+[0m00:18:25.814953 [debug] [Thread-1 (]: Using postgres connection "model.dbt_project.stg_customers"
+[0m00:18:25.814953 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_customers"} */
+alter table "marketpulse360"."analytics"."stg_customers" rename to "stg_customers__dbt_backup"
+[0m00:18:25.816116 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m00:18:25.818603 [debug] [Thread-1 (]: Using postgres connection "model.dbt_project.stg_customers"
+[0m00:18:25.818603 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.045 seconds
+[0m00:18:25.819617 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_customers"} */
+alter table "marketpulse360"."analytics"."stg_customers__dbt_tmp" rename to "stg_customers"
+[0m00:18:25.821863 [debug] [Thread-2 (]: Using postgres connection "model.dbt_project.stg_order_items"
+[0m00:18:25.822236 [debug] [Thread-2 (]: On model.dbt_project.stg_order_items: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_items"} */
+alter table "marketpulse360"."analytics"."stg_order_items" rename to "stg_order_items__dbt_backup"
+[0m00:18:25.822236 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m00:18:25.833000 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.059 seconds
+[0m00:18:25.837086 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: COMMIT
+[0m00:18:25.837086 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.014 seconds
+[0m00:18:25.838744 [debug] [Thread-3 (]: Using postgres connection "model.dbt_project.stg_orders"
+[0m00:18:25.838744 [debug] [Thread-1 (]: Using postgres connection "model.dbt_project.stg_customers"
+[0m00:18:25.838744 [debug] [Thread-2 (]: Using postgres connection "model.dbt_project.stg_order_items"
+[0m00:18:25.838744 [debug] [Thread-3 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+alter table "marketpulse360"."analytics"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m00:18:25.838744 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: COMMIT
+[0m00:18:25.838744 [debug] [Thread-2 (]: On model.dbt_project.stg_order_items: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_items"} */
+alter table "marketpulse360"."analytics"."stg_order_items__dbt_tmp" rename to "stg_order_items"
+[0m00:18:25.838744 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m00:18:25.838744 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m00:18:25.838744 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m00:18:25.838744 [debug] [Thread-3 (]: On model.dbt_project.stg_orders: COMMIT
+[0m00:18:25.847285 [debug] [Thread-2 (]: On model.dbt_project.stg_order_items: COMMIT
+[0m00:18:25.847285 [debug] [Thread-1 (]: Applying DROP to: "marketpulse360"."analytics"."stg_customers__dbt_backup"
+[0m00:18:25.847285 [debug] [Thread-3 (]: Using postgres connection "model.dbt_project.stg_orders"
+[0m00:18:25.852617 [debug] [Thread-2 (]: Using postgres connection "model.dbt_project.stg_order_items"
+[0m00:18:25.855698 [debug] [Thread-1 (]: Using postgres connection "model.dbt_project.stg_customers"
+[0m00:18:25.855698 [debug] [Thread-3 (]: On model.dbt_project.stg_orders: COMMIT
+[0m00:18:25.855698 [debug] [Thread-2 (]: On model.dbt_project.stg_order_items: COMMIT
+[0m00:18:25.857300 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_customers"} */
+drop view if exists "marketpulse360"."analytics"."stg_customers__dbt_backup" cascade
+[0m00:18:25.857693 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m00:18:25.860901 [debug] [Thread-3 (]: Applying DROP to: "marketpulse360"."analytics"."stg_orders__dbt_backup"
+[0m00:18:25.860901 [debug] [Thread-2 (]: SQL status: COMMIT in 0.003 seconds
+[0m00:18:25.860901 [debug] [Thread-3 (]: Using postgres connection "model.dbt_project.stg_orders"
+[0m00:18:25.861900 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.004 seconds
+[0m00:18:25.861900 [debug] [Thread-2 (]: Applying DROP to: "marketpulse360"."analytics"."stg_order_items__dbt_backup"
+[0m00:18:25.861900 [debug] [Thread-3 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+drop view if exists "marketpulse360"."analytics"."stg_orders__dbt_backup" cascade
+[0m00:18:25.861900 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: Close
+[0m00:18:25.861900 [debug] [Thread-2 (]: Using postgres connection "model.dbt_project.stg_order_items"
+[0m00:18:25.867924 [debug] [Thread-2 (]: On model.dbt_project.stg_order_items: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_items"} */
+drop view if exists "marketpulse360"."analytics"."stg_order_items__dbt_backup" cascade
+[0m00:18:25.867924 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m00:18:25.867924 [debug] [Thread-3 (]: On model.dbt_project.stg_orders: Close
+[0m00:18:25.867924 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m00:18:25.867924 [debug] [Thread-2 (]: On model.dbt_project.stg_order_items: Close
+[0m00:18:25.867924 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df30f088-2150-4466-bb9b-7f4768bd495a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F79D960C0>]}
+[0m00:18:25.867924 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df30f088-2150-4466-bb9b-7f4768bd495a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F7C813080>]}
+[0m00:18:25.867924 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df30f088-2150-4466-bb9b-7f4768bd495a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F7C8120C0>]}
+[0m00:18:25.867924 [info ] [Thread-1 (]: 1 of 5 OK created sql view model analytics.stg_customers ....................... [[32mCREATE VIEW[0m in 0.14s]
+[0m00:18:25.867924 [info ] [Thread-3 (]: 3 of 5 OK created sql view model analytics.stg_orders .......................... [[32mCREATE VIEW[0m in 0.15s]
+[0m00:18:25.867924 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_customers
+[0m00:18:25.867924 [info ] [Thread-2 (]: 2 of 5 OK created sql view model analytics.stg_order_items ..................... [[32mCREATE VIEW[0m in 0.15s]
+[0m00:18:25.867924 [debug] [Thread-3 (]: Finished running node model.dbt_project.stg_orders
+[0m00:18:25.867924 [debug] [Thread-2 (]: Finished running node model.dbt_project.stg_order_items
+[0m00:18:25.867924 [debug] [Thread-4 (]: Began running node model.dbt_project.mart_revenue
+[0m00:18:25.867924 [info ] [Thread-4 (]: 4 of 5 START sql table model analytics.mart_revenue ............................ [RUN]
+[0m00:18:25.867924 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.dbt_project.mart_revenue'
+[0m00:18:25.877376 [debug] [Thread-4 (]: Began compiling node model.dbt_project.mart_revenue
+[0m00:18:25.879298 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_project.mart_revenue"
+[0m00:18:25.880324 [debug] [Thread-4 (]: Began executing node model.dbt_project.mart_revenue
+[0m00:18:25.895317 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_project.mart_revenue"
+[0m00:18:25.896317 [debug] [Thread-4 (]: Using postgres connection "model.dbt_project.mart_revenue"
+[0m00:18:25.896317 [debug] [Thread-4 (]: On model.dbt_project.mart_revenue: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.mart_revenue"} */
+
+  
+    
+
+  create  table "marketpulse360"."analytics"."mart_revenue__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH orders AS (
+    SELECT * FROM "marketpulse360"."analytics"."stg_orders"
+),
+items AS (
+    SELECT * FROM "marketpulse360"."analytics"."stg_order_items"
+),
+joined AS (
+    SELECT
+        o.order_id,
+        o.customer_id,
+        o.order_date,
+        o.year,
+        o.month,
+        SUM(i.price)           AS revenue,
+        SUM(i.freight_value)   AS freight,
+        SUM(i.total_item_value) AS total_value,
+        COUNT(i.product_id)    AS nb_items
+    FROM orders o
+    JOIN items i ON o.order_id = i.order_id
+    GROUP BY o.order_id, o.customer_id, o.order_date, o.year, o.month
+)
+SELECT * FROM joined
+  );
+  
+[0m00:18:25.897320 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m00:18:26.357095 [debug] [Thread-4 (]: SQL status: SELECT 96478 in 0.461 seconds
+[0m00:18:26.362343 [debug] [Thread-4 (]: Using postgres connection "model.dbt_project.mart_revenue"
+[0m00:18:26.362343 [debug] [Thread-4 (]: On model.dbt_project.mart_revenue: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.mart_revenue"} */
+alter table "marketpulse360"."analytics"."mart_revenue__dbt_tmp" rename to "mart_revenue"
+[0m00:18:26.363513 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m00:18:26.364440 [debug] [Thread-4 (]: On model.dbt_project.mart_revenue: COMMIT
+[0m00:18:26.364440 [debug] [Thread-4 (]: Using postgres connection "model.dbt_project.mart_revenue"
+[0m00:18:26.364440 [debug] [Thread-4 (]: On model.dbt_project.mart_revenue: COMMIT
+[0m00:18:26.369241 [debug] [Thread-4 (]: SQL status: COMMIT in 0.004 seconds
+[0m00:18:26.370482 [debug] [Thread-4 (]: Applying DROP to: "marketpulse360"."analytics"."mart_revenue__dbt_backup"
+[0m00:18:26.372338 [debug] [Thread-4 (]: Using postgres connection "model.dbt_project.mart_revenue"
+[0m00:18:26.373539 [debug] [Thread-4 (]: On model.dbt_project.mart_revenue: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.mart_revenue"} */
+drop table if exists "marketpulse360"."analytics"."mart_revenue__dbt_backup" cascade
+[0m00:18:26.374445 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m00:18:26.375499 [debug] [Thread-4 (]: On model.dbt_project.mart_revenue: Close
+[0m00:18:26.375499 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df30f088-2150-4466-bb9b-7f4768bd495a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F7C83D2B0>]}
+[0m00:18:26.375499 [info ] [Thread-4 (]: 4 of 5 OK created sql table model analytics.mart_revenue ....................... [[32mSELECT 96478[0m in 0.51s]
+[0m00:18:26.377062 [debug] [Thread-4 (]: Finished running node model.dbt_project.mart_revenue
+[0m00:18:26.377062 [debug] [Thread-3 (]: Began running node model.dbt_project.mart_customer_value
+[0m00:18:26.377062 [info ] [Thread-3 (]: 5 of 5 START sql table model analytics.mart_customer_value ..................... [RUN]
+[0m00:18:26.378783 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_orders, now model.dbt_project.mart_customer_value)
+[0m00:18:26.379124 [debug] [Thread-3 (]: Began compiling node model.dbt_project.mart_customer_value
+[0m00:18:26.381280 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_project.mart_customer_value"
+[0m00:18:26.382090 [debug] [Thread-3 (]: Began executing node model.dbt_project.mart_customer_value
+[0m00:18:26.384323 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_project.mart_customer_value"
+[0m00:18:26.385427 [debug] [Thread-3 (]: Using postgres connection "model.dbt_project.mart_customer_value"
+[0m00:18:26.386414 [debug] [Thread-3 (]: On model.dbt_project.mart_customer_value: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.mart_customer_value"} */
+
+  
+    
+
+  create  table "marketpulse360"."analytics"."mart_customer_value__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH revenue AS (
+    SELECT * FROM "marketpulse360"."analytics"."mart_revenue"
+),
+customers AS (
+    SELECT * FROM "marketpulse360"."analytics"."stg_customers"
+),
+aggregated AS (
+    SELECT
+        c.customer_unique_id,
+        c.customer_state,
+        COUNT(DISTINCT r.order_id)      AS nb_orders,
+        SUM(r.revenue)                  AS total_spent,
+        AVG(r.revenue)                  AS avg_order_value,
+        MIN(r.order_date)               AS first_order,
+        MAX(r.order_date)               AS last_order,
+        MAX(r.order_date) - MIN(r.order_date) AS customer_lifetime_days
+    FROM revenue r
+    JOIN customers c ON r.customer_id = c.customer_id
+    GROUP BY c.customer_unique_id, c.customer_state
+)
+SELECT
+    *,
+    CASE
+        WHEN nb_orders >= 3                    THEN 'Champion'
+        WHEN total_spent >= 500                THEN 'High Value'
+        WHEN nb_orders = 1 AND total_spent < 100 THEN 'One-Time Low'
+        ELSE 'Regular'
+    END AS customer_segment
+FROM aggregated
+  );
+  
+[0m00:18:26.386414 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m00:18:26.827086 [debug] [Thread-3 (]: SQL status: SELECT 93396 in 0.441 seconds
+[0m00:18:26.827086 [debug] [Thread-3 (]: Using postgres connection "model.dbt_project.mart_customer_value"
+[0m00:18:26.827086 [debug] [Thread-3 (]: On model.dbt_project.mart_customer_value: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.mart_customer_value"} */
+alter table "marketpulse360"."analytics"."mart_customer_value__dbt_tmp" rename to "mart_customer_value"
+[0m00:18:26.827086 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m00:18:26.827086 [debug] [Thread-3 (]: On model.dbt_project.mart_customer_value: COMMIT
+[0m00:18:26.827086 [debug] [Thread-3 (]: Using postgres connection "model.dbt_project.mart_customer_value"
+[0m00:18:26.827086 [debug] [Thread-3 (]: On model.dbt_project.mart_customer_value: COMMIT
+[0m00:18:26.827086 [debug] [Thread-3 (]: SQL status: COMMIT in 0.004 seconds
+[0m00:18:26.837234 [debug] [Thread-3 (]: Applying DROP to: "marketpulse360"."analytics"."mart_customer_value__dbt_backup"
+[0m00:18:26.837234 [debug] [Thread-3 (]: Using postgres connection "model.dbt_project.mart_customer_value"
+[0m00:18:26.837234 [debug] [Thread-3 (]: On model.dbt_project.mart_customer_value: /* {"app": "dbt", "dbt_version": "1.12.0b1", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.mart_customer_value"} */
+drop table if exists "marketpulse360"."analytics"."mart_customer_value__dbt_backup" cascade
+[0m00:18:26.837234 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m00:18:26.837234 [debug] [Thread-3 (]: On model.dbt_project.mart_customer_value: Close
+[0m00:18:26.837234 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df30f088-2150-4466-bb9b-7f4768bd495a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F7CC1ABD0>]}
+[0m00:18:26.837234 [info ] [Thread-3 (]: 5 of 5 OK created sql table model analytics.mart_customer_value ................ [[32mSELECT 93396[0m in 0.46s]
+[0m00:18:26.837234 [debug] [Thread-3 (]: Finished running node model.dbt_project.mart_customer_value
+[0m00:18:26.837234 [debug] [MainThread]: On master: COMMIT
+[0m00:18:26.837234 [debug] [MainThread]: Using postgres connection "master"
+[0m00:18:26.837234 [debug] [MainThread]: On master: COMMIT
+[0m00:18:26.837234 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:18:26.869752 [debug] [MainThread]: SQL status: COMMIT in 0.029 seconds
+[0m00:18:26.869752 [debug] [MainThread]: On master: Close
+[0m00:18:26.869752 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:18:26.869752 [debug] [MainThread]: Connection 'list_marketpulse360' was properly closed.
+[0m00:18:26.869752 [debug] [MainThread]: Connection 'list_marketpulse360_analytics' was properly closed.
+[0m00:18:26.869752 [debug] [MainThread]: Connection 'model.dbt_project.stg_customers' was properly closed.
+[0m00:18:26.869752 [debug] [MainThread]: Connection 'model.dbt_project.stg_order_items' was properly closed.
+[0m00:18:26.869752 [debug] [MainThread]: Connection 'model.dbt_project.mart_customer_value' was properly closed.
+[0m00:18:26.869752 [debug] [MainThread]: Connection 'model.dbt_project.mart_revenue' was properly closed.
+[0m00:18:26.869752 [info ] [MainThread]: 
+[0m00:18:26.869752 [info ] [MainThread]: Finished running 2 table models, 3 view models in 0 hours 0 minutes and 1.38 seconds (1.38s).
+[0m00:18:26.869752 [debug] [MainThread]: Command end result
+[0m00:18:26.892615 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\PC\MarketPulse360\dbt_project\target\manifest.json
+[0m00:18:26.897253 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\PC\MarketPulse360\dbt_project\target\semantic_manifest.json
+[0m00:18:26.903187 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\PC\MarketPulse360\dbt_project\target\run_results.json
+[0m00:18:26.904183 [info ] [MainThread]: 
+[0m00:18:26.904183 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:18:26.904183 [info ] [MainThread]: 
+[0m00:18:26.905168 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m00:18:26.905580 [debug] [MainThread]: Command `dbt run` succeeded at 00:18:26.905580 after 2.34 seconds
+[0m00:18:26.905580 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F7A324B30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F7A11CD10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027F7A20B3B0>]}
+[0m00:18:26.906673 [debug] [MainThread]: Flushing usage events
+[0m00:18:27.542127 [debug] [MainThread]: An error was encountered while trying to flush usage events
