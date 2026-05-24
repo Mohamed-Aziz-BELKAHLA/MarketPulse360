@@ -12,11 +12,22 @@
 
 ## 🎯 Project Overview
 
-MarketPulse 360 is a **complete end-to-end data analytics project** built on the **Olist Brazilian E-Commerce dataset** (100K+ real transactions).
+**Context:** Olist is a Brazilian e-commerce marketplace connecting thousands of sellers 
+to customers across Brazil. The dataset contains 100K+ real transactions from 2016–2018, 
+including orders, products, sellers, customers, payments, and reviews.
 
-**Goal:** Simulate the full workflow of a Data Analyst in a company — covering the entire pipeline from raw data ingestion to a production-ready interactive web application, demonstrating skills across data engineering, transformation, analysis, visualization, and deployment.
+**Goal:** Act as a Data Analyst embedded in Olist's business team — transform raw 
+transactional data into actionable insights across the full analytics pipeline:
+ingestion → modeling → transformation → analysis → visualization → web app.
 
-**Dataset:** [Olist Brazilian E-Commerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) · 96K orders · 13.28M BRL revenue · 2016–2018
+**What the analysis delivered:**
+- 📦 **Business overview** — 13.28M BRL revenue, 96K orders, growth trends by category
+- 👥 **Customer segmentation** — 93K customers clustered into 5 RFM segments (Champions, Loyal, At Risk...)
+- 🛡️ **Fraud & anomaly detection** — 23,765 suspicious transactions flagged (21.4% of orders)
+- 📈 **4 business recommendations** with quantified impact — up to +BRL 150K/year recoverable
+
+**Dataset:** [Olist Brazilian E-Commerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) 
+· 96K orders · 13.28M BRL revenue · 2016–2018
 
 
 ---
