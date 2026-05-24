@@ -120,6 +120,8 @@ MarketPulse360/
 
 ## 🚀 Run Locally
 
+> ⚠️ **Prerequisites:** PostgreSQL installed + Olist dataset loaded
+
 ```bash
 # 1. Clone the repo
 git clone https://github.com/Mohamed-Aziz-BELKAHLA/MarketPulse360.git
@@ -128,13 +130,21 @@ cd MarketPulse360
 # 2. Create virtual environment
 python -m venv venv
 venv\Scripts\activate  # Windows
+source venv/bin/activate  # Mac/Linux
 
 # 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Configure PostgreSQL connection in streamlit_app/app.py
+# 4. Load the dataset into PostgreSQL
+# - Create a database named: marketpulse360
+# - Run the SQL scripts in /sql/ folder
+# - Or run: python load_data.py
 
-# 5. Run the Streamlit app
+# 5. Configure the DB connection in streamlit_app/app.py
+# Change this line:
+# engine = create_engine("postgresql://postgres:YOUR_PASSWORD@localhost:5432/marketpulse360")
+
+# 6. Run the Streamlit app
 cd streamlit_app
 streamlit run app.py
 ```
