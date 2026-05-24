@@ -12,9 +12,12 @@
 
 ## 🎯 Project Overview
 
-MarketPulse 360 is a **complete data analytics pipeline** built on the **Olist Brazilian E-Commerce dataset** (100K+ real transactions). The project demonstrates end-to-end data engineering and analytics skills: from raw data ingestion to an interactive web application.
+MarketPulse 360 is a **complete end-to-end data analytics project** built on the **Olist Brazilian E-Commerce dataset** (100K+ real transactions).
+
+**Goal:** Simulate the full workflow of a Data Analyst in a company — covering the entire pipeline from raw data ingestion to a production-ready interactive web application, demonstrating skills across data engineering, transformation, analysis, visualization, and deployment.
 
 **Dataset:** [Olist Brazilian E-Commerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) · 96K orders · 13.28M BRL revenue · 2016–2018
+
 
 ---
 
@@ -143,7 +146,7 @@ Based on the analysis, 4 strategic initiatives were identified:
 ## 👤 Author
 
 **Mohamed Aziz BELKAHLA**
-- 🎓 Étudiant en Data / IA — Sorbonne Paris Nord
+- 🎓 Étudiant en Data / IA — Paris School of Technology & Business
 - 💼 [LinkedIn](https://linkedin.com/in/mohamed-aziz-belkahla)
 - 🐙 [GitHub](https://github.com/Mohamed-Aziz-BELKAHLA)
 
