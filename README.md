@@ -162,5 +162,3 @@ Based on the analysis, 4 strategic initiatives were identified:
 - 🐙 [GitHub](https://github.com/Mohamed-Aziz-BELKAHLA)
 
 ---
-
-*Built as a portfolio project to demonstrate end-to-end data analytics capabilities.*
